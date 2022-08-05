@@ -1,11 +1,13 @@
 {
     "version": "2.0.0",
-    "tasks": [{
-        "label": "db-reset",
-        "command": "make",
-        "args": [
-            "db-reset"
-        ],
-        "type": "shell"
-    }]
+    "tasks": [
+        {
+            "label": "db-reset",
+            "command": "make",
+            "args": [
+                "db-reset"
+            ],
+            "type": "shell"
+        }
+    ]
 }
