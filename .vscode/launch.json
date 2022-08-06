@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "command": "npm start run",
+            "name": "Frontend",
+            "request": "launch",
+            "type": "node-terminal",
+            "cwd": "${workspaceFolder}/frontend"
+        },
+        {
             "name": "Django",
             "type": "python",
             "request": "launch",
@@ -18,7 +25,7 @@
             "justMyCode": true
         },
         {
-            "name": "Django (with DB reset)",
+            "name": "Django (DB reset)",
             "type": "python",
             "request": "launch",
             "preLaunchTask": "db-reset",
