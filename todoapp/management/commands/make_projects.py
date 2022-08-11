@@ -18,7 +18,7 @@ class Command(BaseCommand):
             with open(test_projects_file) as f:
                 test_projects = json.load(f)
             for index, test_project in enumerate(test_projects):
-                users = all_users[index + 1 : index + 3]
+                users = all_users[index : index + index + 1]
                 project = Project(**test_project)
                 project.save()
                 project.users.add(*users)
