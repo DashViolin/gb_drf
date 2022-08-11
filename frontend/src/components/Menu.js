@@ -1,6 +1,3 @@
-import React from 'react'
-
-
 const Menu = () => {
   return (
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -29,7 +26,7 @@ const Menu = () => {
               </ul>
             </li>
             <li className="nav-item">
-              <a className="nav-link disabled" href="/" tabindex="-1" aria-disabled="true">Disabled</a>
+              <a className="nav-link disabled" href="/" tabIndex="-1" aria-disabled="true">Disabled</a>
             </li>
           </ul>
         </div>
