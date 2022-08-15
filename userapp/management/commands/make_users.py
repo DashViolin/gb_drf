@@ -16,6 +16,7 @@ class Command(BaseCommand):
         else:
             FileExistsError(f"Can't find {settings.ENV_PATH} file with environment variables")
 
+        print("--> Create users <--")
         user_model = get_user_model()
 
         su_name = os.environ.get("DJANGO_SUPERUSER_USERNAME")
@@ -31,16 +32,10 @@ class Command(BaseCommand):
             )
             print(f' ->> Superuser "{su_name}" created')
 
-        test_users_file = settings.DATA_DIR / "test_users.json"
+        test_users_file = settings.DATA_DIR / "test_data" / "test_users.json"
         if test_users_file.exists:
             with open(test_users_file) as f:
                 test_users = json.load(f)
             for user in test_users:
-                user_model.objects.create_user(
-                    username=user["username"],
-                    password=user["password"],
-                    email=user["email"],
-                    first_name=user["first_name"],
-                    last_name=user["last_name"],
-                )
+                user_model.objects.create_user(**user)
                 print(f" -> User \"{user['username']}\" created")

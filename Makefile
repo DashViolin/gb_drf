@@ -9,8 +9,13 @@ db-reset:
 	poetry run ./manage.py makemigrations
 	poetry run ./manage.py migrate
 	poetry run ./manage.py make_users
+	poetry run ./manage.py make_projects
+	poetry run ./manage.py make_todos
 
-run:
+back:
 	./manage.py runserver 127.0.0.1:8000 --insecure
 
-reset: db-reset run
+front:
+	cd ./frontend && npm start run
+
+reset: db-reset back

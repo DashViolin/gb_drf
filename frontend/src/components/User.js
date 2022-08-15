@@ -1,10 +1,7 @@
-import React from 'react'
-
-
-const UserItem = ({user}) => {
+const UserItem = ({user, index}) => {
   return (
     <tr>
-      <td>{user.id}</td>
+      <td>{index + 1}</td>
       <td>{user.username}</td>
       <td>{user.first_name}</td>
       <td>{user.last_name}</td>
@@ -18,7 +15,7 @@ const UserList = ({users}) => {
     <table className="table">
       <thead className="table-light">
         <tr>
-          <th scope="col">Id</th>
+          <th scope="col">#</th>
           <th scope="col">Username</th>
           <th scope="col">First Name</th>
           <th scope="col">Last Name</th>
@@ -26,7 +23,7 @@ const UserList = ({users}) => {
         </tr>
       </thead>
       <tbody>
-        {users.map((user) => <UserItem user={user} />)}
+        {users.map((user, index) => <UserItem key={user.email} user={user} index={index}/>)}
       </tbody>
     </table>
   )
