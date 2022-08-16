@@ -1,0 +1,171 @@
+[
+  {
+    "model": "todoapp.todo",
+    "pk": 1,
+    "fields": {
+      "created": "2021-09-11T22:06:48.264Z",
+      "updated": "2021-09-11T22:06:48.264Z",
+      "is_active": true,
+      "text": "todo task 1",
+      "project": 3,
+      "author": 1,
+      "is_completed": false
+    }
+  },
+  {
+    "model": "todoapp.todo",
+    "pk": 2,
+    "fields": {
+      "created": "2021-10-11T22:06:48.264Z",
+      "updated": "2021-10-11T22:06:48.264Z",
+      "is_active": true,
+      "text": "todo task 2",
+      "project": 2,
+      "author": 2,
+      "is_completed": false
+    }
+  },
+  {
+    "model": "todoapp.todo",
+    "pk": 3,
+    "fields": {
+      "created": "2021-11-11T22:06:48.264Z",
+      "updated": "2021-11-11T22:06:48.264Z",
+      "is_active": true,
+      "text": "todo task 3",
+      "project": 1,
+      "author": 3,
+      "is_completed": true
+    }
+  },
+  {
+    "model": "todoapp.todo",
+    "pk": 4,
+    "fields": {
+      "created": "2021-12-11T22:06:48.264Z",
+      "updated": "2021-12-11T22:06:48.264Z",
+      "is_active": true,
+      "text": "todo task 4",
+      "project": 3,
+      "author": 4,
+      "is_completed": false
+    }
+  },
+  {
+    "model": "todoapp.todo",
+    "pk": 5,
+    "fields": {
+      "created": "2022-01-11T22:06:48.267Z",
+      "updated": "2022-01-11T22:06:48.267Z",
+      "is_active": true,
+      "text": "todo task 5",
+      "project": 2,
+      "author": 5,
+      "is_completed": true
+    }
+  },
+  {
+    "model": "todoapp.todo",
+    "pk": 6,
+    "fields": {
+      "created": "2022-02-11T22:06:48.267Z",
+      "updated": "2022-02-11T22:06:48.267Z",
+      "is_active": true,
+      "text": "todo task 6",
+      "project": 2,
+      "author": 5,
+      "is_completed": false
+    }
+  },
+  {
+    "model": "todoapp.todo",
+    "pk": 7,
+    "fields": {
+      "created": "2022-03-11T22:06:48.267Z",
+      "updated": "2022-03-11T22:06:48.267Z",
+      "is_active": true,
+      "text": "todo task 7",
+      "project": 2,
+      "author": 5,
+      "is_completed": false
+    }
+  },
+  {
+    "model": "todoapp.todo",
+    "pk": 8,
+    "fields": {
+      "created": "2022-04-11T22:06:48.267Z",
+      "updated": "2022-04-11T22:06:48.267Z",
+      "is_active": true,
+      "text": "todo task 8",
+      "project": 2,
+      "author": 5,
+      "is_completed": false
+    }
+  },
+  {
+    "model": "todoapp.todo",
+    "pk": 9,
+    "fields": {
+      "created": "2022-05-11T22:06:48.267Z",
+      "updated": "2022-05-11T22:06:48.267Z",
+      "is_active": true,
+      "text": "todo task 9",
+      "project": 2,
+      "author": 5,
+      "is_completed": false
+    }
+  },
+  {
+    "model": "todoapp.todo",
+    "pk": 10,
+    "fields": {
+      "created": "2022-06-11T22:06:48.267Z",
+      "updated": "2022-06-11T22:06:48.267Z",
+      "is_active": true,
+      "text": "todo task 10",
+      "project": 2,
+      "author": 5,
+      "is_completed": true
+    }
+  },
+  {
+    "model": "todoapp.todo",
+    "pk": 11,
+    "fields": {
+      "created": "2022-07-11T22:06:48.267Z",
+      "updated": "2022-07-11T22:06:48.267Z",
+      "is_active": true,
+      "text": "todo task 11",
+      "project": 2,
+      "author": 5,
+      "is_completed": false
+    }
+  },
+  {
+    "model": "todoapp.todo",
+    "pk": 12,
+    "fields": {
+      "created": "2022-08-11T22:06:48.267Z",
+      "updated": "2022-08-11T22:06:48.267Z",
+      "is_active": true,
+      "text": "todo task 12",
+      "project": 2,
+      "author": 5,
+      "is_completed": false
+    }
+  },
+  {
+    "model": "todoapp.todo",
+    "pk": 13,
+    "fields": {
+      "created": "2022-09-11T22:06:48.267Z",
+      "updated": "2022-09-11T22:06:48.267Z",
+      "is_active": true,
+      "text": "todo task 13",
+      "project": 2,
+      "author": 5,
+      "is_completed": false
+    }
+  }
+]

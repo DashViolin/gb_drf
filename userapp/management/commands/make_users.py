@@ -6,6 +6,9 @@ from django.contrib.auth import get_user_model
 from django.core.management.base import BaseCommand
 from dotenv import load_dotenv
 
+COLOR_GREEN = "\033[1;32m"
+COLOR_OFF = "\033[0m"
+
 
 class Command(BaseCommand):
     help = "Use this command to create admin and some test users"
@@ -16,7 +19,7 @@ class Command(BaseCommand):
         else:
             FileExistsError(f"Can't find {settings.ENV_PATH} file with environment variables")
 
-        print("--> Create users <--")
+        print(f"{COLOR_GREEN}--> Create users <--{COLOR_OFF}")
         user_model = get_user_model()
 
         su_name = os.environ.get("DJANGO_SUPERUSER_USERNAME")
@@ -30,7 +33,7 @@ class Command(BaseCommand):
                 first_name="su",
                 last_name="su",
             )
-            print(f' ->> Superuser "{su_name}" created')
+            print(f' -> Superuser "{COLOR_GREEN}{su_name}{COLOR_OFF}" created')
 
         test_users_file = settings.DATA_DIR / "test_data" / "test_users.json"
         if test_users_file.exists:
@@ -38,4 +41,4 @@ class Command(BaseCommand):
                 test_users = json.load(f)
             for user in test_users:
                 user_model.objects.create_user(**user)
-                print(f" -> User \"{user['username']}\" created")
+                print(f" -> User \"{COLOR_GREEN}{user['username']}{COLOR_OFF}\" created")
