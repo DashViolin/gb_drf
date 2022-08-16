@@ -1,0 +1,47 @@
+[
+{
+  "model": "todoapp.project",
+  "pk": 1,
+  "fields": {
+    "created": "2022-08-11T22:06:47.481Z",
+    "updated": "2022-08-11T22:06:47.481Z",
+    "is_active": true,
+    "title": "project 1",
+    "repo": "",
+    "users": [
+      1
+    ]
+  }
+},
+{
+  "model": "todoapp.project",
+  "pk": 2,
+  "fields": {
+    "created": "2022-08-11T22:06:47.489Z",
+    "updated": "2022-08-11T22:06:47.489Z",
+    "is_active": true,
+    "title": "project 2",
+    "repo": "http://github.com/some_project_2",
+    "users": [
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "todoapp.project",
+  "pk": 3,
+  "fields": {
+    "created": "2022-08-11T22:06:47.496Z",
+    "updated": "2022-08-11T22:06:47.496Z",
+    "is_active": true,
+    "title": "project 3",
+    "repo": "http://github.com/some_project_3",
+    "users": [
+      3,
+      4,
+      5
+    ]
+  }
+}
+]
