@@ -1,4 +1,4 @@
-from rest_framework.serializers import ModelSerializer, StringRelatedField
+from rest_framework.serializers import ModelSerializer
 
 from todoapp.models import Project, ToDo
 from userapp.serializers import UserModelSerializer
@@ -14,8 +14,7 @@ class ProjectModelSerializer(ModelSerializer):
 
 class ToDoModelSerializer(ModelSerializer):
     author = UserModelSerializer()
-    project = StringRelatedField()
 
     class Meta:
         model = ToDo
-        exclude = ["is_active", "created", "updated"]
+        exclude = ["is_active", "updated"]
