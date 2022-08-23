@@ -12,7 +12,7 @@ class DefaultLimitOffsetPagination(LimitOffsetPagination):
 
 
 class ToDoLimitOffsetPagination(DefaultLimitOffsetPagination):
-    default_limit = 10
+    default_limit = 20
 
 
 # Мягкое удаление объектов реализовано на уровне менеджера моделей, так что метод delete переопределять не нужно.
