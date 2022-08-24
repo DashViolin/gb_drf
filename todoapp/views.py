@@ -1,5 +1,6 @@
 from django.conf import settings
 from rest_framework.pagination import LimitOffsetPagination
+from rest_framework.permissions import DjangoModelPermissions
 from rest_framework.viewsets import ModelViewSet
 
 from todoapp.filters import ProjectFilter, ToDoFilter
@@ -21,6 +22,7 @@ class ProjectModelViewSet(ModelViewSet):
     queryset = Project.objects.filter(is_active=True)
     pagination_class = DefaultLimitOffsetPagination
     filterset_class = ProjectFilter
+    permission_classes = [DjangoModelPermissions]
 
 
 class ToDoModelViewSet(ModelViewSet):
@@ -28,3 +30,4 @@ class ToDoModelViewSet(ModelViewSet):
     queryset = ToDo.objects.filter(is_active=True)
     pagination_class = ToDoLimitOffsetPagination
     filterset_class = ToDoFilter
+    permission_classes = [DjangoModelPermissions]
