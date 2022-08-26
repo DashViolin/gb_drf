@@ -1,9 +1,9 @@
 from django.contrib import admin
 
-from userapp import models as userapp_models
+from userapp.models import CustomUser
 
 
-@admin.register(userapp_models.CustomUser)
+@admin.register(CustomUser)
 class CustomUserAdmin(admin.ModelAdmin):
-    list_display = ["id", "username", "email", "is_active", "date_joined"]
-    ordering = ["-date_joined"]
+    list_display = ["id", "username", "email", "is_active", "is_staff", "is_superuser", "date_joined"]
+    ordering = ["id"]

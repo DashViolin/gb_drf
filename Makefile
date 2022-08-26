@@ -9,7 +9,7 @@ db-reset:
 	rm -f ./todoapp/migrations/00*.py
 	poetry run ./manage.py makemigrations
 	poetry run ./manage.py migrate
-	poetry run ./manage.py make_users
+	poetry run ./manage.py make_users_and_groups
 	poetry run ./manage.py loaddata project.json todo.json
 
 back:
