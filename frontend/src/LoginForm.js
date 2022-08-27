@@ -29,12 +29,12 @@ class LoginForm extends React.Component {
             <div className="card px-5 py-5" id="form1">
               <form className="rounded" onSubmit={(event) => (this.handleSubmit(event))}>
                 <div className="mb-3">
-                  <label for="login" className="form-label">Login</label>
+                  <label htmlFor="login" className="form-label">Login</label>
                   <input type="text" className="form-control" name="login" aria-describedby="loginHelp" value={this.state.login} onChange={(event) => this.handleChange(event)} />
                   <div id="loginHelp" className="form-text">Don't share your login with anyone else.</div>
                 </div>
                 <div className="mb-3">
-                  <label for="password" className="form-label">Password</label>
+                  <label htmlFor="password" className="form-label">Password</label>
                   <input type="password" className="form-control" name="password" value={this.state.password} onChange={(event) => this.handleChange(event)} />
                 </div>
                 <button type="submit" className="btn btn-block btn-primary text-center w-100">Submit</button>
