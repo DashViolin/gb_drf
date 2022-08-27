@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom"
+import Header from "./Header";
+
 
 const ToDoItem = ({todo}) => {
   const link = () => (window.location=`projects/${todo.project}`)
@@ -18,19 +19,22 @@ const ToDoItem = ({todo}) => {
 
 const ToDoList = ({todos}) => {
   return (
-    <table className="table table-hover">
-      <thead className="table-light">
-        <tr>
-          <th scope="col">Status</th>
-          <th scope="col">Text</th>
-          <th scope="col">Author</th>
-          <th scope="col">Created at</th>
-        </tr>
-      </thead>
-      <tbody>
-        {todos.map((todo) => <ToDoItem key={todo.id} todo={todo}/>)}
-      </tbody>
-    </table>
+    <div className="container">
+      <Header />
+      <table className="table table-hover">
+        <thead className="table-light">
+          <tr>
+            <th scope="col">Status</th>
+            <th scope="col">Text</th>
+            <th scope="col">Author</th>
+            <th scope="col">Created at</th>
+          </tr>
+        </thead>
+        <tbody>
+          {todos.map((todo) => <ToDoItem key={todo.id} todo={todo}/>)}
+        </tbody>
+      </table>
+    </div>
   )
 }
 
