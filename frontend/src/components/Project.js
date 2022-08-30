@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import Header from "./Header";
 
 
 const ProjectItem = ({project}) => {
@@ -15,18 +16,21 @@ const ProjectItem = ({project}) => {
 
 const ProjectList = ({projects}) => {
   return (
-    <table className="table">
-      <thead className="table-light">
-        <tr>
-          <th scope="col">Title</th>
-          <th scope="col">Repo link</th>
-          <th scope="col">Users</th>
-        </tr>
-      </thead>
-      <tbody>
-        {projects.map((project) => <ProjectItem key={project.id} project={project}/>)}
-      </tbody>
-    </table>
+    <div className="container">
+      <Header />
+      <table className="table">
+        <thead className="table-light">
+          <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Repo link</th>
+            <th scope="col">Users</th>
+          </tr>
+        </thead>
+        <tbody>
+          {projects.map((project) => <ProjectItem key={project.id} project={project}/>)}
+        </tbody>
+      </table>
+    </div>
   )
 }
 
