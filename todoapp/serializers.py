@@ -5,7 +5,7 @@ from userapp.serializers import UserModelSerializer
 
 
 class ProjectModelSerializer(ModelSerializer):
-    users = UserModelSerializer(many=True)
+    # users = UserModelSerializer(many=True)
 
     class Meta:
         model = Project
