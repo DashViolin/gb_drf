@@ -1,7 +1,7 @@
 #!make
 
 key:
-	python -c "from django.core.management.utils import get_random_secret_key;print(get_random_secret_key())"
+	poetry run python -c "from django.core.management.utils import get_random_secret_key;print(get_random_secret_key())"
 
 db-reset:
 	rm -f ./data/db.sqlite3
@@ -13,7 +13,7 @@ db-reset:
 	poetry run ./manage.py loaddata project.json todo.json
 
 back:
-	./manage.py runserver 127.0.0.1:8000 --insecure
+	poetry run ./manage.py runserver 127.0.0.1:8000 --insecure
 
 front:
 	cd ./frontend && npm start run

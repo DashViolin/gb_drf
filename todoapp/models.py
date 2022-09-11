@@ -30,7 +30,7 @@ class ToDoAppBaseModel(models.Model):
 
 class Project(ToDoAppBaseModel):
     title = models.CharField(_("title"), max_length=150, blank=False)
-    repo = models.CharField(_("repo"), max_length=255, blank=True, default=None)
+    repo = models.CharField(_("repo"), max_length=255, null=True, default=None)
     users = models.ManyToManyField(get_user_model())
 
     def __str__(self) -> str:
