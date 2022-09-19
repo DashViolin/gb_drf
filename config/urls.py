@@ -1,8 +1,10 @@
 from django.contrib import admin
 from django.urls import include, path, re_path
+from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import TemplateView
 from drf_yasg import openapi
 from drf_yasg.views import get_schema_view as yasg_get_schema_view
+from graphene_django.views import GraphQLView
 from rest_framework.authtoken import views
 from rest_framework.permissions import AllowAny
 from rest_framework.routers import DefaultRouter
@@ -37,7 +39,7 @@ router.register("todos", ToDoModelViewSet)
 urlpatterns = [
     path("admin/", admin.site.urls),
     path(
-        "swagger-ui/",
+        "openapi/swagger-ui/",
         TemplateView.as_view(template_name="swagger-ui.html", extra_context={"schema_url": "schema-openapi-drf"}),
         name="swagger-ui",
     ),  # Swagger UI без сторонних билиотек (задание со *):
@@ -53,4 +55,5 @@ urlpatterns = [
     path("api-jwt-token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
     path("api-jwt-token/verify/", TokenVerifyView.as_view(), name="token_verify"),
     path("api/", include(router.urls)),
+    path("graphql/", csrf_exempt(GraphQLView.as_view(graphiql=True))),
 ]
