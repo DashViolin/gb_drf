@@ -18,6 +18,7 @@ mixer = "^7.2.2"
 PyYAML = "^6.0"
 uritemplate = "^4.1.1"
 drf-yasg = "^1.21.3"
+graphene-django = "^2.15.0"
 
 [tool.poetry.dev-dependencies]
 isort = "^5.10.1"
