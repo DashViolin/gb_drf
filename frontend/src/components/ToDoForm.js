@@ -31,15 +31,15 @@ class ToDoForm extends React.Component {
   render() {
     return (
       <form onSubmit={(event) => this.handleSubmit(event)}>
-        <div className="form-group">
+        <div className="mb-3">
           <label name="text">Text</label>
           <input type="text" className="form-control" name="text" placeholder="Task text"
             value={this.state.text} onChange={(event) => this.handleChange(event)} />
         </div>
-        <div className="form-group">
+        <div className="mb-3">
           <label name="projects">Pojects</label>
           <select name="projects" className='form-control' onChange={(event) => this.handleProjectSelect(event)} >
-            {this.props.projects.map((item) => <option value={item.id}>{item.title}</option>)}
+            {this.props.projects.map((item) => <option key={item.id} value={item.id}>{item.title}</option>)}
           </select>
         </div>
         <input type="submit" value="Create" className="btn btn-primary" />
