@@ -18,4 +18,7 @@ back:
 front:
 	cd ./frontend && npm start run
 
+build:
+	cd ./frontend && npm run build
+
 reset: db-reset back

@@ -5,7 +5,7 @@ from rest_framework.viewsets import ModelViewSet
 
 from todoapp.filters import ProjectFilter, ToDoFilter
 from todoapp.models import Project, ToDo
-from todoapp.serializers import ProjectModelSerializer, ToDoModelSerializer
+from todoapp.serializers import ProjectModelSerializer, ProjectModelSerializerV2, ToDoModelSerializer
 
 
 class DefaultLimitOffsetPagination(LimitOffsetPagination):
@@ -18,11 +18,15 @@ class ToDoLimitOffsetPagination(DefaultLimitOffsetPagination):
 
 # Мягкое удаление объектов реализовано на уровне менеджера моделей, так что метод delete переопределять не нужно.
 class ProjectModelViewSet(ModelViewSet):
-    serializer_class = ProjectModelSerializer
     queryset = Project.objects.filter(is_active=True)
     pagination_class = DefaultLimitOffsetPagination
     filterset_class = ProjectFilter
     permission_classes = [DjangoModelPermissions]
+
+    def get_serializer_class(self):
+        if self.request.version == "0.2":
+            return ProjectModelSerializerV2
+        return ProjectModelSerializer
 
 
 class ToDoModelViewSet(ModelViewSet):

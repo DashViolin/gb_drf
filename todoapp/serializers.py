@@ -12,8 +12,19 @@ class ProjectModelSerializer(ModelSerializer):
         exclude = ["is_active", "created", "updated"]
 
 
+class ProjectModelSerializerV2(ModelSerializer):
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        representation['users'] = UserModelSerializer(instance.users, many=True).data
+        return representation
+
+    class Meta:
+        model = Project
+        exclude = ["is_active", "created", "updated"]
+
+
 class ToDoModelSerializer(ModelSerializer):
-    author = UserModelSerializer()
+    # author = UserModelSerializer()
 
     class Meta:
         model = ToDo

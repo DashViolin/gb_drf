@@ -1,6 +1,6 @@
-# from django.contrib.auth.models import AbstractBaseUser, UserManager
 from django.contrib.auth.models import AbstractUser, UserManager
 from django.contrib.auth.validators import ASCIIUsernameValidator
+from django.utils.translation import gettext_lazy as _
 
 
 class CaseInsensitiveUserManager(UserManager):
@@ -11,6 +11,11 @@ class CaseInsensitiveUserManager(UserManager):
 class CustomUser(AbstractUser):
     username_validator = ASCIIUsernameValidator()
     objects = CaseInsensitiveUserManager()
+
+    class Meta:
+        ordering = ['id']
+        verbose_name = _("user")
+        verbose_name_plural = _("users")
 
 
 # class CustomUser(AbstractBaseUser):
