@@ -5,7 +5,7 @@
             "label": "db-reset",
             "command": "make",
             "args": [
-                "db-reset"
+                "reset"
             ],
             "type": "shell"
         }

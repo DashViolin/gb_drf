@@ -22,7 +22,8 @@
                 "--insecure",
             ],
             "django": true,
-            "justMyCode": true
+            "justMyCode": true,
+            "cwd": "${workspaceFolder}/backend"
         },
         {
             "name": "Django (DB reset)",
@@ -36,7 +37,8 @@
                 "--insecure",
             ],
             "django": true,
-            "justMyCode": true
+            "justMyCode": true,
+            "cwd": "${workspaceFolder}/backend"
         }
     ]
 }

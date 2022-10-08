@@ -55,7 +55,7 @@ class ProjectForm extends React.Component {
         <div className="mb-3">
           <label name="users">Pojects</label>
           <select multiple name="users" className='form-control' onChange={(event) => this.handleUsersSelect(event)} >
-            {this.props.users.map((item) => <option value={item.id}>{item.username}</option>)}
+            {this.props.users.map((item) => <option key={item.id} value={item.id}>{item.username}</option>)}
           </select>
         </div>
         <input type="submit" value="Create" className="btn btn-primary" />

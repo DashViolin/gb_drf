@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
- 
+
 
 class ProjectEditForm extends React.Component {
   constructor(props) {
@@ -65,10 +65,10 @@ class ProjectEditForm extends React.Component {
           <select multiple name="users" className='form-control'
             value={this.state.users}
             onChange={(event) => this.handleUsersSelect(event)} >
-            {this.props.users.map((item) => <option value={item.id}>{item.username}</option>)}
+            {this.props.users.map((item) => <option key={item.id} value={item.id}>{item.username}</option>)}
           </select>
         </div>
-        <input type="submit" value="Create" className="btn btn-primary" />
+        <input type="submit" value="Save" className="btn btn-primary" />
       </form>
     );
   }
@@ -77,7 +77,7 @@ class ProjectEditForm extends React.Component {
 
 const withRouter = WrappedComponent => props => {
   const params = useParams();
- 
+
   return (
     <WrappedComponent
       {...props}

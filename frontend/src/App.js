@@ -22,7 +22,8 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.handleFilterTextChange = this.handleFilterTextChange.bind(this);
-    this.srv_api_url = 'http://127.0.0.1:8000'
+    // this.srv_api_url = 'http://127.0.0.1:8000'
+    this.srv_api_url = 'http://89-108-114-175.cloudvps.regruhosting.ru:8000'
     this.obtain_token_api_url = `${this.srv_api_url}/api-token-auth/`
     this.projects_api_url = `${this.srv_api_url}/api/projects`
     this.todos_api_url = `${this.srv_api_url}/api/todos`
